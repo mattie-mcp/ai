@@ -30,6 +30,21 @@ var/
 *.manifest
 *.spec
 
+#Prev bots
+*.hlt
+ImprovedBot.py
+AmbiturnerBot.py 
+DiscerningBot.py 
+OverkillBot.py 
+ProductionBot.py 
+RandomBot.py 
+hlt.log
+hlt.py
+hlt.pyc
+halite
+__pycache__
+
+
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
@@ -44,6 +59,9 @@ nosetests.xml
 coverage.xml
 *,cover
 .hypothesis/
+
+#Aliases
+runGame.sh
 
 # Translations
 *.mo
