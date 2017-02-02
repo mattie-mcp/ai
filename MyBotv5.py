@@ -69,7 +69,7 @@ def get_move(square):
         if friendDir is not None:
             friendSq = game_map.get_target(square, friendDir)
 
-        if tempStr <= 255 and tempSq.owner in (0, myID) and enemy.distance > 3:
+        if tempStr <= 255 and tempSq.owner in (0, myID):
             return Move(square, tempDir)
         elif friendDir is not None and friendSq is not None:
             if enemy.distance < 3 and friendSq.strength+square.strength <= 255:
@@ -78,6 +78,9 @@ def get_move(square):
         else:
             return Move(square, STILL)
     else:
+        enemy = find_nearest_enemy_direction(square)
+        if (enemy.distance > 7):
+            return Move(square, enemy.direction)
         #wait until we are strong enough to attack
         return Move(square, STILL)
 
