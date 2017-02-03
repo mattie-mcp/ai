@@ -1,6 +1,6 @@
 # Team Asimov's Law: Katie Mulder, Ben LaFeldt, Mattie Phillips. We based our bot off of the Overkill bot found in the forum 
 # So you’ve Improved the Random Bot. Now what? Found at http://forums.halite.io/t/so-youve-improved-the-random-bot-now-what/482.
-# Our improvements are on lines 49 and 56 - 61. Comments explaining the reasoning behind the change preceed the modified
+# Our improvements are on lines 49 and 56 - 62. Comments explaining the reasoning behind the change preceed the modified
 # lines of code. Our GitHub repository is at https://github.com/mattie-mcp/halite-bot .
 import hlt
 from hlt import NORTH, EAST, SOUTH, WEST, STILL, Move, Square
@@ -55,7 +55,8 @@ def get_move(square):
 		# limits the amount of strength sacrificed to the cap by not moving if it would result in going over the strength cap. 
         tempDir = find_nearest_enemy_direction(square)
         tempSq = game_map.get_target(square, tempDir)
-        if (square.strength + tempSq.strength) <= 255:
+        tempStr = square.strength + tempSq.strength
+        if tempStr <= 255:
             return Move(square, tempDir)
         else:
             return Move(square, STILL)
