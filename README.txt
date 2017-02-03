@@ -1,4 +1,4 @@
 Halite Bot
-Team Asimov's Law: Katie Mulder, Ben LaFeldt, Mattie Phillips
+Team Asimov's Laws: Katie Mulder, Ben LaFeldt, Mattie Phillips
 
 This bot was created to compete in the Halite competition - https://halite.io
